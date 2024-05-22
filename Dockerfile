@@ -1,4 +1,4 @@
-FROM quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.0.0.0-Final-java17
+FROM container-registry.oracle.com/os/oraclelinux:8-slim
 
 ARG APP_FILE
 EXPOSE 8080
