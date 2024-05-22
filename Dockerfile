@@ -10,5 +10,5 @@ FROM container-registry.oracle.com/os/oraclelinux:9-slim
 
 EXPOSE 8080
 
-COPY ./build/target/graalvm-native-docker-demo app
+COPY --from=builder ./build/target/graalvm-native-docker-demo app
 ENTRYPOINT ["/app"]
