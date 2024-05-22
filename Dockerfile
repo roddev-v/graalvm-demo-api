@@ -1,5 +1,7 @@
-FROM alpine
-WORKDIR /app
-COPY ./target/graalvm-native-docker-demo ./graalvm-native-docker-demo
-RUN ls -la
-CMD graalvm-native-docker-demo
+FROM container-registry.oracle.com/os/oraclelinux:8-slim
+
+ARG APP_FILE
+EXPOSE 8080
+
+COPY target/${APP_FILE} app
+ENTRYPOINT ["/app"]
