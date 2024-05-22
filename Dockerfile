@@ -4,7 +4,7 @@ WORKDIR /build
 
 COPY . /build
 
-RUN  ./mvnw native:compile -Pnative
+RUN ./mvnw --no-transfer-progress native:compile -Pnative
 
 FROM container-registry.oracle.com/os/oraclelinux:9-slim
 
