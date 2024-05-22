@@ -1,4 +1,4 @@
 FROM alpine
 WORKDIR /app
 COPY ./target/graalvm-native-docker-demo .
-CMD ["ls"]
+CMD ["./graalvm-native-docker-demo"]
